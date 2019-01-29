@@ -31,7 +31,9 @@ export default {
                   return res.json();
               })
               .then(json => {
+                  console.log(json);
                   const cotacao = json[de_para].val;
+                  console.log("asa");
                   this.moedaB_value = (cotacao * parseFloat(this.moedaA_value)).toFixed(2);
               });
         }
